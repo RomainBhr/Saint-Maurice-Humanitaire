@@ -1,0 +1,89 @@
+<?php include "deb.php"?>
+<td id=tout><br><center>
+<p class="text1">Bienvenue dans :</p><p class="text2"><i>l'espace commentaire </i></p></center><br>
+</table>
+
+<?php
+if(!is_authentified())
+{
+        header('location:auth2.php');
+}
+?>
+<div class="div2">
+</div>
+
+
+<?php
+if (isset($_POST["titre"]))
+{
+	$iduser = $_COOKIE['user_id'];
+	$titre = mysqli_real_escape_string($CO, $_POST["titre"]);
+	$commentaire = addslashes ($_POST["commentaire"]);
+    $categorie = $_POST["categorie"];
+    $sql = 	"insert into article (art_titre, art_commentaire, art_categorie, `art_date`,art_idadmin )
+	values ('$titre', '$commentaire','$categorie', NOW(), $iduser)";
+	mysqli_query($CO, $sql) or die(mysqli_error($CO));
+    $message_ajout = "<b>Bien ajouté</b>";
+	header ('location:commentaire.php');
+	
+}
+
+?>
+
+<table border class="table3">
+   <tr>
+   <td id="tout">
+   
+   <center>
+   
+   <form method=post> 
+      <p span id="orange">Titre de l'article: <br><textarea autofocus type="text" name="titre" class="input1" placeholder="titre" /></textarea></p> 
+      <p span id="orange">Commentaire: <br /><textarea name="commentaire" rows="10" cols="50" class="input1" placeholder="Votre commentaire"></textarea></p> 
+      <input type="hidden" name="MAX_FILE_SIZE" value="2097152"> 
+	  
+	  
+
+      <p span id="orange">Choisissez une photo avec une taille inférieure à 2 Mo.<p>(non obligatoire)</p></p>
+	  <input type="file" name="photo" class="input1"> <br>
+	   
+	  
+      <br><input type="submit"value="Envoyer" class="input1"> 
+	 <div id='myText' style='visibility: hidden'>	  
+	  <select name="categorie">
+      <option value=1>Laisser un commentaire </select></div>
+   </form><br>   <?php if (isset($message_ajout)) echo "<a span id='orange'>$message_ajout</a>"; ?></table>
+   <br><center>
+
+   </center>   
+   <br> 
+
+
+
+<div class="div2">
+</div>
+
+   <?php 
+    $sql = "SELECT * 
+	from article, user
+	where art_categorie = 1 
+	and user.id = article.art_idadmin";
+	$rs_articles = mysqli_query($CO, $sql) or die(mysqli_error($CO));
+	echo "<br><table border>"; 
+	while ($article = mysqli_fetch_array($rs_articles)) 
+	{
+		$titre = $article['art_titre'];
+		$commentaire = $article['art_commentaire'];
+        $categorie = $article['art_categorie'];
+	    $date = $article ['art_date'];
+		$user = $article['login'];
+		
+		echo "<br><table border class='table3'>
+		<tr><td id=tout height=30px colspan=2><center><p id='orange'><b><i>$titre</i></b></p></center>
+		<tr><td id=tout height=100px><center><p id='orange'><i> $user</i> :<p> $commentaire</p> </center>
+		<tr><td id=tout colspan=2 height=30px><center><p><i>Le : $date</i></p></center></table><br>";
+	}
+	echo "</table>  ";
+   ?>
+
+
+<?php include "fin_page.php"?>

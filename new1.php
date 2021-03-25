@@ -1,0 +1,205 @@
+<html>
+<head>
+<title>Un titre</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <style type="text/css">
+#main {
+max-width:960px;
+margin:auto;
+position:relative;
+}
+#menu {
+width:240px;
+position:absolute;
+}
+#contenu {
+margin-left:245px;
+min-height:150px;
+}
+#menu {
+float:right;
+width:240px;
+}
+#contenu {
+margin-right:245px;
+}
+</style>
+</head>
+<body>   
+<div id="main">
+<div class="coupe"><p> blablabla </p></div>
+  </div>
+  <div id="menu">
+<div class="coupe"><p> blablabla </p></div>
+<div><p class="coupe"> blablabla </p></div>
+<div><p> blablabla </p></div>
+  </div>
+<div id="contenu">
+<div class="coupe"><p> blablabla </p></div>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+<br>
+test
+  </div>
+  
+</body>
+</html>

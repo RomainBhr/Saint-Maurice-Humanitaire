@@ -1,0 +1,17 @@
+<?php include "deb.php"?>
+<td id=td4><h2><p span id="bleuf">Laissez-moi un <u>petit message</u> :</p></h2>
+     <form>
+     <table>
+<tr>
+<td>Votre email: <td><input type="email">
+<tr>
+<td>Votre sexe :<td>
+<input type="radio" name="gender" value="homme">H<br>
+<input type="radio" name="gender" value="femme">F
+<tr>
+<td>Marseillais :<td> <input type="checkbox"> Cochez si vous habitez Marseille
+<tr>
+<td>Votre message: <td><input type="text">
+<tr>
+<td><td><input type=submit value="Valider">
+<?php include "fin_page.php"?>
